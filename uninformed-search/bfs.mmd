@@ -1,0 +1,12 @@
+graph TD;
+    A(Start) --> B[Inisialisasi queue, parent, visited]
+    B --> C{Queue tidak kosong?}
+    C -- Yes --> D[Pilih node dari depan queue]
+    D --> E{Apakah node == goal?}
+    E -- Yes --> F[Kembalikan jalur dan Selesai]
+    E -- No --> G[Periksa 4 arah atas, bawah, kiri, kanan]
+    G --> H{Apakah tetangga valid dan belum dikunjungi?}
+    H -- Yes --> I[Tambahkan ke queue dan tandai sebagai dikunjungi]
+    I --> C
+    H -- No --> C
+    C -- No --> J[Tidak ada jalur ditemukan & Selesai]
