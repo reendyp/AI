@@ -1,0 +1,12 @@
+flowchart TD
+    A[Define Domain Size and Grid] --> B[Define Heat Distribution Function]
+    B --> C[Initialize Particles]
+    C --> D[Calculate Fitness and Initialize Bests]
+    D --> E{Iterate Until Convergence or Max Iterations}
+    E --> F[Update Particle Velocities]
+    F --> G[Update Particle Positions]
+    G --> H[Evaluate Fitness of Particles]
+    H --> I{Update Personal and Global Bests}
+    I --> E
+    E --> J[Store Particles' Positions and Global Best]
+    J --> K[Visualize Results]
